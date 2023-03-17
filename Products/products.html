@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Products</title>
+    <link rel="stylesheet" href="products.css" type="text/css" />
+  </head>
+  <body>
+    <h1 id="login-header">Products</h1>
+    <div class="button-container">
+      <button id="main" onclick="location.href='../index.html'">
+        Main page
+      </button>
+      <button
+        id="addproduct"
+        onclick="location.href='/Products/productmanager.html'"
+      >
+        Products Manager
+      </button>
+    </div>
+
+    <div id="products-container"></div>
+
+    <script>
+      // Make an AJAX call to fetch the data from products.json file
+      fetch("products.json")
+        .then((response) => response.json())
+        .then((data) => {
+          // your code here
+
+          // Iterate through each user in the JSON data and create a product card for them
+          const productsContainer = document.querySelector(
+            "#products-container"
+          );
+          for (const [username, products] of Object.entries(data)) {
+            const userContainer = document.createElement("div");
+            userContainer.classList.add("user-card");
+            userContainer.innerHTML = `<h2>${username}'s Products</h2>`;
+
+            // Iterate through each product for the user and create a link to the product page
+            const productsList = document.createElement("ul");
+            productsList.classList.add("products-list");
+            for (const product of products) {
+              const productListItem = document.createElement("a");
+              productListItem.setAttribute(
+                "href",
+                `productspages/${product.productName}.html`
+              );
+              productListItem.classList.add("product-card");
+              let images = "";
+              product.productImage.forEach((image, index) => {
+                images += `<img src="${image}" alt="${product.productName}" data-index="${index}" class="active">`;
+              });
+              productListItem.innerHTML = `
+              <div class="product-info">
+                <p>Product name: ${product.productName}</p>
+                <p>Description: ${product.description}</p>
+                <p>Phone number: ${product.phoneNumber}</p>
+              </div>
+              <div class="product-image-container">
+                <div class="product-image">${images}</div>
+              </div>
+            `;
+              productsList.appendChild(productListItem);
+            }
+            userContainer.appendChild(productsList);
+            productsContainer.appendChild(userContainer);
+          }
+
+          // Add event listener to the product image container to switch between images
+          const productImageContainers = document.querySelectorAll(
+            ".product-image"
+          );
+          productImageContainers.forEach((productImageContainer) => {
+            const productImages = productImageContainer.querySelectorAll("img");
+            productImages.forEach((productImage) => {
+              productImage.addEventListener("click", (event) => {
+                const index = event.target.dataset.index;
+                productImages.forEach((image) =>
+                  image.classList.remove("active")
+                );
+                event.target.classList.add("active");
+                productImageContainer.scrollTo(
+                  index * event.target.offsetWidth,
+                  0
+                );
+              });
+            });
+          });
+        });
+        .catch((error) => console.error(error.message));
+    </script>
+  </body>
+</html>

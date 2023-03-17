@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>eyal and Ilan GPT</title>
+    <link rel="stylesheet" href="PM.css" type="text/css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <form>
+      <h1>Product Manager</h1>
+      <button
+        onclick="event.preventDefault(); location.href='/Products/AddProduct.html'"
+      >
+        Add Product
+      </button>
+      <button onclick="event.preventDefault(); location.href='../index.html'">
+        Main Page
+      </button>
+      <button
+        onclick="event.preventDefault(); location.href='my_products.html'"
+      >
+        My Uploads
+      </button>
+      <hr />
+
+      <ul id="product-list"></ul>
+    </form>
+    <script>
+      document
+        .getElementById("add-product")
+        .addEventListener("click", function () {
+          window.location.href = "AddProduct.html";
+        });
+
+      var deleteButtons = document.getElementsByClassName("delete-product");
+      for (var i = 0; i < deleteButtons.length; i++) {
+        deleteButtons[i].addEventListener("click", function () {
+          this.parentNode.parentNode.removeChild(this.parentNode);
+        });
+      }
+    </script>
+  </body>
+</html>

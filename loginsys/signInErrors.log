@@ -1,0 +1,33 @@
+[14-Mar-2023 08:11:13 UTC] PHP Notice:  Username and password should be no more than 20 characters in /home/runner/eyal-and-ilan-gpt/signUp.php on line 17
+[14-Mar-2023 12:28:28 UTC] PHP Warning:  Undefined array key "email" in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 15
+[14-Mar-2023 12:28:28 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 23
+[14-Mar-2023 12:28:28 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 24
+[14-Mar-2023 12:29:44 UTC] PHP Warning:  Undefined array key "email" in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 15
+[14-Mar-2023 12:29:44 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 23
+[14-Mar-2023 12:29:44 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 24
+[14-Mar-2023 12:30:21 UTC] PHP Warning:  Undefined array key "email" in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 15
+[14-Mar-2023 12:30:21 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 23
+[14-Mar-2023 12:30:21 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 24
+[14-Mar-2023 12:39:33 UTC] PHP Warning:  Undefined array key "email" in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 15
+[14-Mar-2023 12:39:33 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 24
+[14-Mar-2023 12:41:48 UTC] PHP Warning:  Undefined array key "email" in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 15
+[14-Mar-2023 12:41:48 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 24
+[14-Mar-2023 12:41:52 UTC] PHP Warning:  Undefined array key "email" in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 15
+[14-Mar-2023 12:41:52 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 24
+[14-Mar-2023 12:42:15 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 24
+[14-Mar-2023 12:42:15 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 24
+[14-Mar-2023 12:42:32 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 24
+[14-Mar-2023 12:47:25 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 24
+[14-Mar-2023 12:48:37 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 24
+[14-Mar-2023 12:48:50 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 24
+[14-Mar-2023 12:54:37 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 24
+[14-Mar-2023 12:56:13 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 24
+[14-Mar-2023 12:57:58 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 25
+[14-Mar-2023 12:57:59 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 25
+[14-Mar-2023 12:58:00 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 25
+[14-Mar-2023 12:58:01 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 25
+[15-Mar-2023 09:45:57 UTC] PHP Notice:  Email address should end with @educ.org.il in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 21
+[15-Mar-2023 09:48:49 UTC] PHP Notice:  Username already exists in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 36
+[15-Mar-2023 12:07:09 UTC] PHP Notice:  Username already exists in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 36
+[15-Mar-2023 12:51:37 UTC] PHP Notice:  Username already exists in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 36
+[15-Mar-2023 12:56:07 UTC] PHP Notice:  Username already exists in /home/runner/eyal-and-ilan-gpt/loginsys/signUp.php on line 36

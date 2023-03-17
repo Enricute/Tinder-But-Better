@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add a new product</title>
+    <link rel="stylesheet" href="PM.css" type="text/css" />
+  </head>
+  <body>
+    <h2>Add a new product</h2>
+    <div>
+      <form
+        action="add_product.php"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="form-group">
+          <label for="productName">Product Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="productName"
+            name="productName"
+            maxlength="50"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea
+            class="form-control"
+            id="description"
+            name="description"
+            rows="3"
+            maxlength="100"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number:</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="phoneNumber"
+            name="phoneNumber"
+            pattern="[0-9]{10}"
+            required
+          />
+          <small class="form-text text-muted"
+            >Please enter a 10-digit phone number.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="productImage">Upload Image(s):</label>
+          <input
+            type="file"
+            class="form-control-file"
+            id="productImage"
+            name="productImage[]"
+            multiple
+            accept="image/*"
+            required
+          />
+        </div>
+        <button type="submit" name="submit" class="btn btn-primary">
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

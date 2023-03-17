@@ -1,0 +1,8 @@
+
+[13-Mar-2023 20:06:48 UTC] PHP Notice:  Invalid username or password in /home/runner/eyal-and-ilan-gpt/Login.php on line 21
+[15-Mar-2023 12:10:13 UTC] PHP Notice:  Invalid username or password in /home/runner/eyal-and-ilan-gpt/loginsys/Login.php on line 17
+[15-Mar-2023 12:15:40 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/runner/eyal-and-ilan-gpt/loginsys/auth.php on line 2
+[15-Mar-2023 12:15:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/runner/eyal-and-ilan-gpt/loginsys/auth.php:2) in /home/runner/eyal-and-ilan-gpt/loginsys/Login.php on line 22
+[15-Mar-2023 12:32:49 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/runner/eyal-and-ilan-gpt/loginsys/auth.php on line 2
+[15-Mar-2023 12:32:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/runner/eyal-and-ilan-gpt/loginsys/auth.php:2) in /home/runner/eyal-and-ilan-gpt/loginsys/Login.php on line 22
+[15-Mar-2023 12:32:49 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/runner/eyal-and-ilan-gpt/loginsys/auth.php on line 2

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products</title>
+  <link rel="stylesheet" href="products.css" type="text/css" />
+</head>
+<body>
+  <h1 id="login-header">Products - Logged in as <span id="username"></span></h1>
+  <div class="button-container">
+    <button id="main" onclick="location.href='../index.html'">Main page</button>
+    <button id="addproduct" onclick="location.href='/products/productmanager.html'">Products Manager</button>
+  </div>
+
+  <div id="products-container"></div>
+
+  <script>
+    // Make a fetch call to retrieve the username from PHP
+    fetch('get_username.php')
+      .then(response => response.text())
+      .then(username => {
+        // Store the username in the sessionStorage
+        sessionStorage.setItem('uname', username);
+        // Set the username in the header
+        const usernameElement = document.querySelector('#username');
+        usernameElement.innerText = username;
+        // Fetch the products data and display the user's products
+        fetch('products.json')
+          .then(response => response.json())
+          .then(data => {
+            // Check if the currently logged in user has any products
+            if (data.hasOwnProperty(username)) {
+              const products = data[username];
+              const productsContainer = document.querySelector('#products-container');
+              const userContainer = document.createElement('div');
+              userContainer.classList.add('user-card');
+              userContainer.innerHTML = `<h2>${username}'s Products</h2>`;
+              const productsList = document.createElement('ul');
+              productsList.classList.add('products-list');
+              for (const product of products) {
+                const productListItem = document.createElement('a');
+                productListItem.setAttribute('href', `productspages/${product.productName}.html`);
+                productListItem.classList.add('product-card');
+                let images = '';
+                product.productImage.forEach((image, index) => {
+                  images += `<img src="${image}" alt="${product.productName}" data-index="${index}" class="active">`;
+                });
+                productListItem.innerHTML = `
+                  <div class="product-info">
+                    <p>Product name: ${product.productName}</p>
+                    <p>Description: ${product.description}</p>
+                    <p>Phone number: ${product.phoneNumber}</p>
+                  </div>
+                  <div class="product-image-container">
+                    <div class="product-image">${images}</div>
+                  </div>
+                `;
+                productsList.appendChild(productListItem);
+              }
+              userContainer.appendChild(productsList);
+              productsContainer.appendChild(userContainer);
+              // Add event listener to the product image container to switch between images
+              const productImageContainers = document.querySelectorAll('.product-image');
+              productImageContainers.forEach(productImageContainer => {
+                const productImages = productImageContainer.querySelectorAll('img');
+                productImages.forEach(productImage => {
+                  productImage.addEventListener('click', (event) => {
+                    const index = event.target.dataset.index;
+                    productImages.forEach(image => image.classList.remove('active'));
+                    event.target.classList.add('active');
+                    productImageContainer.scrollTo(index * event.target.offsetWidth, 0);
+                  });
+                });
+              });
+            } else {
+              const noProductsMsg = document.createElement('p');
+              noProductsMsg.innerText = 'You have no products.';
+              productsContainer.appendChild(noProductsMsg);
+            }
+          })
+          .catch(error => console.error(error));
+      })
+      .catch(error => console.error(error));
+  </script>
+</body>
+</html>

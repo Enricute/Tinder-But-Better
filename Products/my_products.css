@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  font-weight: 300;
+  color: hsl(0 0% 15%);
+}
+
+h2 {
+  font-weight: 400;
+  margin: 2rem 0 0.25rem 0;
+}
+
+h1#login-header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+  margin: 0;
+  color: #ffffff;
+}
+
+p {
+  margin: 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: #080710;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.button-container button {
+  margin: 0 1rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ffffff;
+  background-color: hsl(280, 80%, 40%);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button-container button:hover {
+  background-color: hsl(280, 80%, 50%);
+}
+
+#products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-left: 10%;
+  margin-right: 35%;
+}
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.product-card {
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 8 / 5;
+  --bg: hsl(330, 80%, calc(90% - (var(--hover) * 10%)));
+  --accent: hsl(280, 80%, 40%);
+  transition: background 0.2s, transform 0.2s;
+  background: radial-gradient(circle at top left, var(--accent), transparent 75%), var(--bg);
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  transform: scale(1);
+  transition: all 1s;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  flex-wrap: wrap;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

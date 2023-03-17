@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="theme.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+ 
+</head>
+<body>
+
+
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+     <form action="Login.php" method="post">
+        <h3>Login </h3>
+       
+    <label for="username">Username:</label>
+    <input type="text" name="uname"><br><br>
+    <label for="password">Password:</label>
+    <input type="password" name="password"><br><br>
+         <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <div id="g_id_onload"
+         data-client_id="298750583301-lf9f064487bn88fbp5eq7tmi7l07kapd.apps.googleusercontent.com"
+         data-ux_mode="redirect"
+         data-login_uri="https://eyal-and-ilan-gpt.ylnpynkhsvb.repl.co/products/products.html">
+    </div>
+    <div class="g_id_signin" data-type="standard"></div>
+    <input type="submit" value="Sign In">
+  </form>
+</body>
+</html>

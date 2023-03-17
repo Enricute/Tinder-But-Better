@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="theme.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+<!-- Include the Google API client library -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="
+298750583301-6qp74bakt91opmcfiomuhrldvcmrohfc.apps.googleusercontent.com">
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+<form action="signUp.php" method="post">
+    <h3> Sign up</h3>
+    <label for="uname">Username:</label>
+    <input type="text" name="uname"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" name="email"><br><br>
+    <label for="pwd">Password:</label>
+    <input type="password" name="pwd"><br><br>
+    
+    <!-- Add the Google Sign-in button -->
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+    <input type="submit" value="Sign Up">
+</form>
+
+<script>
+    function onSignIn(googleUser) {
+        // Get the user's ID token and other information
+        var id_token = googleUser.getAuthResponse().id_token;
+        var profile = googleUser.getBasicProfile();
+        var email = profile.getEmail();
+
+        // Add the user's ID token and email to the form
+        var form = document.querySelector('form');
+        var idTokenInput = document.createElement('input');
+        idTokenInput.type = 'hidden';
+        idTokenInput.name = 'id_token';
+        idTokenInput.value = id_token;
+        form.appendChild(idTokenInput);
+
+        var emailInput = document.createElement('input');
+        emailInput.type = 'hidden';
+        emailInput.name = 'email';
+        emailInput.value = email;
+        form.appendChild(emailInput);
+
+        // Submit the form
+        form.submit();
+    }
+</script>
+</body>
+</html>
